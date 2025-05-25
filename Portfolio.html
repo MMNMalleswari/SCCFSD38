@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background-color:  #ffffff;; display: flex; flex-direction: column; min-height: 100vh; }
+    header { background: linear-gradient(135deg, #0f3460, #e94560); 
+            ; padding: 15px 20px; text-align: center; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+    header h1 { font-size: 32px; color: white; }
+    .profile-container { background: rgb(255, 225, 196); padding: 30px; margin: auto; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: center; width: 90%; max-width: 500px; }
+    .profile-pic { width: 120px; border-radius: 50%; margin-bottom: 15px; cursor: pointer; }
+    .name { font-size: 24px; margin: 10px 0; }
+    .bio { color: #666; margin-bottom: 15px; }
+    .btn { display: inline-block; margin: 10px 5px; padding: 10px 15px; 
+            background: linear-gradient(135deg, #e94560, #0f3460); color: white; text-decoration: none; border-radius: 5px; transition: background-color 0.3s ease; }
+    .btn:hover { background-color: #0056b3; }
+    button{display: inline-block;
+            padding: 15px 30px; 
+            margin: 15px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: white; 
+            background: linear-gradient(135deg, #e94560, #0f3460); 
+            border: none;  
+            border-radius: 50px; 
+            cursor: pointer; 
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .btn:hover { 
+            background: linear-gradient(135deg, #0f3460, #16213e); 
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+    .theme-toggle { margin-top: 15px; padding: 10px; background-color: #333; color: white; border: none; cursor: pointer; }
+    footer { background: linear-gradient(135deg, #0f3460, #e94560); 
+            ; padding: 15px 20px; text-align: center; box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1); margin-top: 20px; }
+    .dark-mode {background: linear-gradient(to right, #1a1a2e, #16213e); color: white; }
+    .dark-mode .name { color: rgb(165, 12, 106); }
+    .dark-mode .testimonial{ color:black;}
+  </style>
+</head>
+<body>
+  <header><h1>Portfolio</h1></header>
+
+  <div class="profile-container"> <img src="" alt="Profile Picture" class="profile-pic" id="profilePic">
+                                  <h1 class="name" id="profileName"></h1>
+                                  <p id="testimonialText" class="testimonial"></p>
+                                  <button id="themeToggle" class="theme-toggle">Toggle Dark Mode</button></div>
+
+<button id="requestLogin" style="position: fixed; top: 10px; right: 10px; padding: 8px 12px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Request Login</button>
+<script>
+  document.getElementById('requestLogin').addEventListener('click', function() {
+    alert("Username: viewers\nPassword: MmNm!2025!");
+  });
+</script>
+
+
+  <footer>  <a href="home.html" class="btn">Home</a><a href="audio.html" class="btn">Audio</a>
+            <a href="resume.html" class="btn">Resume</a><a href="github.html" class="btn">GitHub</a>
+            <a href="contact.html" class="btn">Contact</a></footer>
+  <script>
+    const profile = { name: "Malleswari",
+                      bio: ["Learning to be Web Developer", "Aesthetic Design Enthusiast", "Problem Solver"],
+                      picture: "neyni.jpg",
+                      testimonials: [ "Great problem-solving skills!","Has a great eye for design and usability.",
+                                      "Very passionate about web development!","Excellent debugging and coding skills.",
+                                      "Always strives for perfection in projects."]};
+    let testimonialIndex = 0;
+    document.getElementById('profilePic').src = profile.picture;
+    document.getElementById('profileName').innerText = profile.name;
+    document.getElementById('testimonialText').innerText = profile.testimonials[testimonialIndex];
+    function rotateTestimonials() { testimonialIndex = (testimonialIndex + 1) % profile.testimonials.length;
+                                    document.getElementById('testimonialText').innerText = profile.testimonials[testimonialIndex];}
+                                    setInterval(rotateTestimonials, 2000);
+                                    document.getElementById('themeToggle').addEventListener('click', () => {document.body.classList.toggle('dark-mode');});
+                                    document.getElementById('profilePic').addEventListener('click', function() {
+      const newPic = prompt("Enter the URL of your new profile picture:");
+      if (newPic) {profile.picture = newPic;this.src = newPic;}});
+    document.querySelector("a[href='resume.html']").addEventListener("click", function(event) {
+    event.preventDefault(); 
+    let username = prompt("Enter Username:");
+    let password = prompt("Enter Password:");
+    const validUsername = "viewers";
+    const validPassword = "MmNm!2025!";
+    if (username === validUsername && password === validPassword)
+     {window.location.href = "resume.html"; } 
+    else
+     {alert("Invalid credentials. Try again.");
+     }});
+  </script>
+</body>
+</html>
+
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(1, 12, 43);
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px;
+            background: bisque;
+            border-radius: 50px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            height: auto;
+            min-height: 450px;
+        }
+
+        .container h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #333;
+            
+        }
+        .container h1{
+            margin-top:5px;
+            font-size:42px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        label {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            margin-top: 5px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        textarea {
+            height: 150px;
+            font-size: 22px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #e94560, #0f3460);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact</h1> <!-- Added Title -->
+        
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Write your message here..."></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Buttons Positioned at the Bottom -->
+        <div class="button-container">
+            <a href="portfolio.html" class="btn">Portfolio</a>
+            <a href="audio.html" class="btn">Audio</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            alert("Thank you for your message! We will get back to you soon."); 
+        });
+    </script>
+</body>
+</html>

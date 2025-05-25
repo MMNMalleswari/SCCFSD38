@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:rgb(18, 6, 58);
+            padding: 50px;
+        }
+        .audio-container {
+            background: bisque;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+             margin: auto; 
+             font-size:25px;
+             border-radius: 10px; 
+             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+              text-align: center; 
+              width: 90%; 
+              max-width: 500px;
+              margin-top:250px;
+        }
+        
+         .btn { 
+            display: inline-block;
+            padding: 15px 30px; 
+            margin: 15px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: white; 
+            background: linear-gradient(135deg, #e94560, #0f3460); 
+            border: none;  
+            border-radius: 50px; 
+            cursor: pointer; 
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .btn:hover { 
+            background: linear-gradient(135deg, #0f3460, #16213e); 
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-container">
+        <h2>Audio Player</h2>
+        <audio controls>
+            <source src="audiofile.mp4" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+     </p>
+        <a href="portfolio.html" class="btn">Portfolio</a>
+        <a href="contact.html" class="btn">Contact</a>
+    </div>
+</body>
+</html>

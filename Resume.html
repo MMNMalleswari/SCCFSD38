@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+           background: linear-gradient(to right, #0f2027, #203a43, #2c5364); display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            FONT-SIZE:20PX;
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff7676;
+        }
+
+        .section {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: scale(1.02);
+        }
+
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #ff7676;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 5px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .project {
+            padding: 12px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .view-button {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #ff7676;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+
+        .view-button:hover {
+            background-color: #ff4949;
+        }
+          .button-container {
+        display: flex;
+        justify-content: right;
+        right:1%;
+        gap: 15px; /* Space between buttons */
+        position: fixed;
+        bottom: 0;
+        background: linear-gradient(135deg, #0f3460, #e94560);
+        padding: 15px;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    }
+    .btn {
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: linear-gradient(135deg, #e94560, #0f3460);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn:hover {
+        background: linear-gradient(135deg, #0f3460, #16213e);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    }
+        .footer {
+            text-align: center;
+            padding-top: 15px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mindhi Madhavi Naga Malleswari</h1>
+            <p>Bhimavaram, Andhra Pradesh, India | madhavi**@gmail.com | 798196****</p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>Email: madhavimindhi@gmail.com</p>
+            <p>Phone: 798196****</p>
+            <p>LinkedIn: madhavi****</p>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>Creative and detail-oriented web developer with experience in **HTML, CSS, JavaScript**, and **Django backend development**.</p>
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>Django & Backend Development</li>
+                <li>Algorithm Design & Debugging</li>
+                <li>GUI Development (Tkinter)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Periodic Table Website</h3>
+                <p>An interactive web application displaying elements and their properties.</p>
+                <p><b>Technology Used:</b> HTML, CSS, JavaScript, Django web framework</p>
+                <a href="file:///C:/Project/templates/home.html" class="view-button">View Project</a>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <p>Currently pursuing **B.Tech** (2<sup>nd</sup> Year) in **SRKR(A)**, Bhimavaram — **9 CGPA in IT**</p>
+            <p><b>Intermediate:</b> Sri Chaitanya Jr. College, Bhimavaram — **96.9%**</p>
+            <p><b>SSC:</b> C.V. Raman School, Bhimavaram — **10 CGPA**</p>
+        </div>
+
+        <div class="footer">
+            <p>✨ Designed with Passion | © 2025 All Rights Reserved ✨</p>
+        </div>
+    </div>
+    <!-- Button container placed at the bottom -->
+<div class="button-container">
+    <a href="portfolio.html" class="btn">Portfolio</a>
+    <a href="contact.html" class="btn">Contact</a>
+</div>
+</body>
+</html>

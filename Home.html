@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Home Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body { 
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1a1a2e, #16213e);
+            color: white; 
+            text-align: center; 
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header { 
+            background: linear-gradient(135deg, #0f3460, #e94560); 
+            padding: 25px; 
+            font-size: 28px; 
+            font-weight: bold; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .container { 
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .explore-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 90px;
+    }
+    .button-group {
+        display: flex;
+        gap: 2px; 
+    }
+
+
+        .btn { 
+            display: inline-block;
+            padding: 15px 30px; 
+            margin: 15px; 
+            font-size: 20px; 
+            font-weight: bold; 
+            color: white; 
+            background: linear-gradient(135deg, #e94560, #0f3460); 
+            border: none;  
+            border-radius: 50px; 
+            cursor: pointer; 
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .btn:hover { 
+            background: linear-gradient(135deg, #0f3460, #16213e); 
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+        }
+        p { 
+            font-size: 28px; 
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        h2 { 
+            font-size: 24px; 
+            text-transform: uppercase;
+            margin-top: 25px;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.2);
+        }
+
+        .audio-btn { 
+            position: absolute; 
+            top: 15px; 
+            left: 15px; 
+            padding: 12px 18px;  
+            font-size: 16px;  
+            font-weight: bold; 
+            color: white;  
+            background: linear-gradient(135deg, #e94560, #0f3460); ;  
+            border: none; 
+            border-radius: 50px; 
+            cursor: pointer; 
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .audio-btn:hover { 
+            background: linear-gradient(135deg, #0f3460, #16213e);
+            transform: scale(1.1);
+        }
+
+        footer { 
+            background: linear-gradient(135deg, #0f3460, #e94560); 
+            padding: 15px; 
+            font-size: 18px; 
+            font-weight: bold; 
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <a href="audio.html" class="audio-btn">🎵 Audio</a>
+    <header>
+        Welcome to My Homepage
+    </header>
+    <div class="container">
+        <p><b>M.Madhavi Naga Malleswari</b><br>
+           Currently pursuing B.Tech 2<sup>nd</sup>Year in the steam of IT at <b>SRKR(A)</b> College, Bhimavaram
+        
+        </p>
+    </div>
+    <div class="explore-container">
+        <h2>Explore More</h2>
+        <div class="button-group">
+        <a href="portfolio.html" class="btn">Portfolio</a>
+        <a href="contact.html" class="btn">Contact</a>
+    </div>
+    </div>
+    <footer>
+        &copy; 2025 All Rights Reserved | Designed with Passion ❤️
+    </footer>
+</body>
+</html>
